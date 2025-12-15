@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunea Wire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <header class="header">
+  <div class="header-content">
+    <img src="images/LOGO.png" alt="Lunea Wire Logo" class="logo">
+
+    <div class="brand-text">
+      <h1>Lunea Wire</h1>
+      <p>Handmade Wire Accessories</p>
+      <p>"Softly Crafted, Naturally Beautiful"</p>
+    </div>
+  </div>
+</header>
+
+
+<section class="best-seller">
+  <h2>Best Seller🌟</h2>
+
+  <div class="best-grid">
+
+    <div class="best-card">
+      <img src="images/luneawire3.jpg" alt="Bloom Hair Accessories">
+      <h3>Bloom Hair Accessories</h3>
+      <p>Produk favorit pelanggan.</p>
+    </div>
+
+    <div class="best-card">
+      <img src="images/luneawire4.jpg" alt="Floral Clips">
+      <h3>Floral Clips</h3>
+      <p>Aksesoris handmade terlaris.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="catalog">
+    <h2>CATALOG</h2>
+  <section class="products">
+  
+  <div class="product">
+    <img src="images/luneawire1.jpg" alt="Dreamy Hair Accessories">
+    <h3>Dreamy Hair Accessories</h3>
+    <p>Hair accessories dengan sentuhan lembut kawat bulu yang manis.</p>
+    <span class="price">Rp 25.000</span>
+    <button onclick="pesanWA('Dreamy Hair Accessories','25000')">
+  Pesan via WhatsApp
+</button>
+  </div>
+
+  <div class="product">
+    <img src="images/luneawire2.jpg" alt="elegant mirror">
+    <h3>elegant mirror</h3>
+    <p>cermin dengan gaya elegant dan manis.</p>
+    <span class="price">Rp 10.000</span>
+    <button onclick="pesanWA('elegant mirror','10000')">
+  Pesan via WhatsApp
+</button>
+  </div>
+
+  <div class="product">
+    <img src="images/luneawire3.jpg" alt="Bloom Hair Accessories">
+    <h3>Bloom Hair Accessories</h3>
+    <p>Hair accessories dengan tema bloom yang lucu dan sederhana.</p>
+    <span class="price">Rp 15.000</span>
+   <button onclick="pesanWA('Bloom Hair Accessories','15000')">
+  Pesan via WhatsApp
+</button>
+  </div>
+
+   <div class="product">
+    <img src="images/luneawire4.jpg" alt="Floral Clips">
+    <h3>Floral Clips</h3>
+    <p>Hair clips dengan tema floral yang elegant.</p>
+    <span class="price">Rp 5.000</span>
+    <button onclick="pesanWA('Floral Clips','5000')">
+  Pesan via WhatsApp
+</button>
+  </div>
+
+  <div class="product">
+    <img src="images/custom.jpg" alt="Custom">
+    <h3>Custom</h3>
+    <p> kalian bisa custom accessories yang kalian inginkan di lunea wire.</p>
+    <span class="price">Rp 0</span>
+    <button onclick="pesanWA('Custom','0')">
+  Pesan via WhatsApp
+</button>
+
+
+  </div>
+
+
+  </section>
+</section>
+
+<section class="about">
+  <h2>Tentang Lunea Wire</h2>
+  <p>
+    Lunea Wire menghadirkan aksesoris handmade terbuat dari kawat
+    bulu yang dibentuk dengan ketelitian dan sentuhan lembut. 
+    Setiap karya terinspirasi dari keindahan bulan, anggun dan unik.
+  </p>
+</section>
+
+<section class="contact">
+  <h2>Kontak Kami</h2>
+
+  <div class="contact-list">
+    <a href="https://instagram.com/lunea.wire" target="_blank">
+      📸 Instagram: @lunea.wire
+    </a>
+
+    <a href="https://wa.me/6289524852088" target="_blank">
+      💬 WhatsApp: 0895-2485-2088
+    </a>
+      📍 Lokasi: Jl. Karya Bersama, Kec. sematang borang, Palembang
+    </a>
+  </div>
+</section>
+
+
+<script>
+function pesanWA(namaProduk, harga) {
+  const nomor = "6289524852088";
+
+  const pesan = `Halo Lunea Wire 🌙
+
+Saya ingin memesan produk berikut:
+
+Nama Produk : ${namaProduk}
+Harga : Rp ${harga}
+
+Nama Lengkap :
+Alamat Pengiriman :
+No HP :
+Metode Pembayaran :
+
+Terima kasih 🤍`;
+
+  const url =
+    "https://api.whatsapp.com/send?phone=" +
+    nomor +
+    "&text=" +
+    encodeURIComponent(pesan);
+
+  window.open(url, "_blank");
+}
+</script>
+</body>
+</html>
